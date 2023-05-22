@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkawauch <tkawauch@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/19 18:50:54 by root              #+#    #+#             */
-/*   Updated: 2023/05/22 18:52:51 by tkawauch         ###   ########.fr       */
+/*   Created: 2023/05/22 18:37:34 by tkawauch          #+#    #+#             */
+/*   Updated: 2023/05/22 18:52:16 by tkawauch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
-{
-	int	i;
-	int	num;
-	int	sign;
+#include <unistd.h>
 
-	i = 0;
-	sign = 1;
-	num = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	while (str[i] == '+' || str[i] == '-')
+int	ft_isalpha(char *str)
+{
+	int	count;
+
+	count = 0;
+	if (str[0] == '\0')
 	{
-		if (str[i] == '-')
-			sign *= -1;
-		i++;
+		return (1);
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (str[count] != '\0')
 	{
-		num = num * 10 + (str[i] - '0');
-		i++;
+		if (!((str[count] >= 'a' && str[count] <= 'z')))
+		{
+			if (!(str[count] >= 'A' && str[count] <= 'Z'))
+			{
+				return (0);
+			}
+		}
+		count++;
 	}
-	return (num * sign);
+	return (1);
 }

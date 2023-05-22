@@ -1,36 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkawauch <tkawauch@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/19 18:50:54 by root              #+#    #+#             */
-/*   Updated: 2023/05/22 18:52:51 by tkawauch         ###   ########.fr       */
+/*   Created: 2023/05/22 18:44:46 by tkawauch          #+#    #+#             */
+/*   Updated: 2023/05/22 18:52:04 by tkawauch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
-{
-	int	i;
-	int	num;
-	int	sign;
+#include <stdio.h>
 
-	i = 0;
-	sign = 1;
-	num = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	while (str[i] == '+' || str[i] == '-')
-	{
-		if (str[i] == '-')
-			sign *= -1;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		num = num * 10 + (str[i] - '0');
-		i++;
-	}
-	return (num * sign);
+int	ft_isalnum(char c)
+{
+	return ((c >= '0' && c <= '9') || \
+		(c >= 'a' && c <= 'z') || \
+		(c >= 'A' && c <= 'Z'));
 }
