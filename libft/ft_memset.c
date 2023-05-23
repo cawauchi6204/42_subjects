@@ -1,39 +1,31 @@
-// /* ************************************************************************** */
-// /*                                                                            */
-// /*                                                        :::      ::::::::   */
-// /*   ft_memset.c                                        :+:      :+:    :+:   */
-// /*                                                    +:+ +:+         +:+     */
-// /*   By: tkawauch <tkawauch@student.42tokyo.jp>     +#+  +:+       +#+        */
-// /*                                                +#+#+#+#+#+   +#+           */
-// /*   Created: 2023/05/22 20:27:52 by tkawauch          #+#    #+#             */
-// /*   Updated: 2023/05/22 21:32:40 by tkawauch         ###   ########.fr       */
-// /*                                                                            */
-// /* ************************************************************************** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tkawauch <tkawauch@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/23 19:46:30 by tkawauch          #+#    #+#             */
+/*   Updated: 2023/05/23 19:55:29 by tkawauch         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-// #include <stdio.h>
+#include <stdio.h>
 
-// void	*ft_memset(void *b, int c, size_t len)
-// {
-// 	while (len--)
-// 	{
-// 		b = &c;
-// 		b++;
-// 	}
-// 	return (b);
-// }
+void	*ft_memset(void *b, int c, size_t n)
+{
+	int					i;
+	unsigned char		*p;
 
-// void	*ft_memset(void *s, int c, size_t n)
-// {
-// 	const unsigned char	uc;
-// 	unsigned char		*p;
-
-// 	uc = c;
-// 	*p = (unsigned char *)s;
-// 	while (n--)
-// 		*p++ = uc;
-
-// 	return (s);
-// }
+	i = 0;
+	p = b;
+	while (n--)
+	{
+		p[i] = (unsigned char)c;
+		i++;
+	}
+	return (p);
+}
 
 // #include <stdio.h>
 // #include <string.h>
