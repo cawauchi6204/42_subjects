@@ -6,7 +6,7 @@
 /*   By: tkawauch <tkawauch@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 19:10:01 by tkawauch          #+#    #+#             */
-/*   Updated: 2023/05/25 21:06:02 by tkawauch         ###   ########.fr       */
+/*   Updated: 2023/05/25 21:33:37 by tkawauch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ size_t	ft_strlen(const char *s);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 
 #endif
