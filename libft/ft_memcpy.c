@@ -6,13 +6,14 @@
 /*   By: tkawauch <tkawauch@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 20:30:43 by tkawauch          #+#    #+#             */
-/*   Updated: 2023/05/23 21:05:06 by tkawauch         ###   ########.fr       */
+/*   Updated: 2023/05/25 21:02:08 by tkawauch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	int				i;
 	unsigned char	*p;

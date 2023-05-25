@@ -6,7 +6,7 @@
 /*   By: tkawauch <tkawauch@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 19:03:52 by tkawauch          #+#    #+#             */
-/*   Updated: 2023/05/22 19:09:31 by tkawauch         ###   ########.fr       */
+/*   Updated: 2023/05/25 19:04:51 by tkawauch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
-	{
 		i++;
-	}
 	return (i);
 }
